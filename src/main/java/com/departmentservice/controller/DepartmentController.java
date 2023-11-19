@@ -1,5 +1,6 @@
 package com.departmentservice.controller;
 
+import com.departmentservice.client.EmployeeClient;
 import com.departmentservice.dto.Department;
 import com.departmentservice.repository.DepartmentRepository;
 import org.slf4j.Logger;
@@ -17,6 +18,9 @@ public class DepartmentController {
 
     @Autowired
     private DepartmentRepository repository;
+
+    @Autowired
+    EmployeeClient employeeClient;
 
     @PostMapping
     public Department add(@RequestBody Department department) {
