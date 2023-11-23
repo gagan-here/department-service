@@ -19,6 +19,7 @@ public class WebClientConfig {
     public WebClient employeeWebClient() {
         return WebClient.builder()
                 .baseUrl("http://employee-service")
+                .filter(filterFunction)
                 .build();
     }
 
